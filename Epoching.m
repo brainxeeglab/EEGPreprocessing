@@ -6,6 +6,8 @@ clear all; clc; close all;
 
 % Epoch parameters
 epoch_duration=[-0.2 1.2];
+baseline_int=[-200,-10];
+
 sp=" ";  % one single space
  
 %% Make sure there is an EEGLAB (with neccessary plug-ins toolboxes) in the path.
@@ -110,7 +112,7 @@ for i=1:Nparti  % in the raw data path
             epoch_conditions_new(EEG,ALLEEG,...   % data
                        "THIS",...             % condition for target
                     epoch_duration,...        % Epoch  duration 
-                    parti_list{i});          
+                    parti_list{i},baseline_int);          
           
           else
                disp('++ Preprocessing dir does not exist for this participant. Please do preprocessing before epoching \n');
