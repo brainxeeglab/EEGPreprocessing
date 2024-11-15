@@ -51,7 +51,12 @@ addpath(genpath(AR2_path));
 
 % FAST ICA toolbox
 FastICA=fullfile(TOOLboxdir,"FastICA_25");
-addpath(genpath(FastICA)); 
+addpath(genpath(FastICA)); '
+
+% NoiseTools toolbox
+FastICA=fullfile(TOOLboxdir,"NoiseTools");
+addpath(genpath(FastICA)); '
+
  
 %% Preprocessed data path (raw path where the subject raw and preprocessing
 % data are stored)
@@ -65,11 +70,9 @@ Nparti=length(parti_list);
 fprintf('Number of participants in the raw data folder is %d \n',Nparti);
 
 %% Processing  
-% Robust Detrending option
+% Robust Detrending option  
 RobDetr = 'off'; % pop_basicfilter for highpass filtering > 0.3 Hz 
 Filtering ='on';  % non-filtered data is also saved separtely along with filtered data (30 Hz) 
-
-
 
 % Preprocessing is done in the function brx_openNpreprocess.m
 
