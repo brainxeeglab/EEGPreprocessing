@@ -1,10 +1,10 @@
-function epoch_conditions_new(eeg,ALLEEG,cond,epoch_duration,parti_name) 
+function epoch_conditions_new(eeg,ALLEEG,cond,epoch_duration,parti_name,baseline_int) 
 
 try
 [eeg,idx_accepted_events] = pop_epoch(eeg, {cond},epoch_duration, 'newname', cond, 'epochinfo', 'yes');
 [ALLEEG, eeg, ~] = pop_newset(ALLEEG, eeg, 1,'gui','off');
 eeg = eeg_checkset(eeg);
-eeg = pop_rmbase( eeg, [-200,-10],[]);  % baseline subtraction here  
+eeg = pop_rmbase( eeg, baseline_int,[]);  % baseline subtraction here  
 [~,  eeg ,~] = pop_newset(ALLEEG,eeg, 2,'gui','off');
 eeg = eeg_checkset( eeg );
 
