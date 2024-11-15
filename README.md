@@ -4,11 +4,14 @@ In order to preprocess the *.mff file for each participant, please follow the fo
 
 1. raw folder contains folders for each participant
 
+```
 raw  
 ├── sub1_20221124
 ├── sub2_20221226
 ├── ...
 ├── sub100_20220825
+
+```
  
 
 cd sub1_20221124
