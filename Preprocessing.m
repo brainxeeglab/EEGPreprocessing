@@ -51,11 +51,11 @@ addpath(genpath(AR2_path));
 
 % FAST ICA toolbox
 FastICA=fullfile(TOOLboxdir,"FastICA_25");
-addpath(genpath(FastICA)); '
+addpath(genpath(FastICA)); 
 
 % NoiseTools toolbox
-FastICA=fullfile(TOOLboxdir,"NoiseTools");
-addpath(genpath(FastICA)); '
+Noisetool=fullfile(TOOLboxdir,"NoiseTools");
+addpath(genpath(Noisetool); 
 
  
 %% Preprocessed data path (raw path where the subject raw and preprocessing
