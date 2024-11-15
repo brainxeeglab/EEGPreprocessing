@@ -32,7 +32,7 @@ disp(["Data size after trial rejection  ", num2str(size(data))]);
 disp('++ Saving epoched data, accepted and rejected trials...');   
  
 writematrix(idx_accepted_events,strcat(parti_name,'_accepted_trials.csv')) 
-%save(strcat(parti_name,'.mat'),'data','-v7.3');  % Not saving right now
+save(strcat(parti_name,'.mat'),'data','-v7.3');  % Not saving right now
 
 
 %Save the rejected trial files 
